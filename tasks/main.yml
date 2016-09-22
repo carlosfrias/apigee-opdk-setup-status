@@ -34,6 +34,7 @@
 - name: Router self report
   debug:
     var: edge_router_self
+  when: edge_router_self is defined
 
 - name: Obtain message processor server self report
   ignore_errors: yes
@@ -45,6 +46,7 @@
 - name: Message processor self report
   debug:
     var: edge_mp_self
+  when: edge_mp_self is defined
 
 - name: Obtain postgres server self report
   ignore_errors: yes
@@ -56,6 +58,7 @@
 - name: Postgres server self report
   debug:
     var: edge_ps_self
+  when: edge_ps_self is defined
 
 - name: Obtain qpid server self report
   ignore_errors: yes
@@ -67,3 +70,4 @@
 - name: Qpid server self report
   debug:
     var: edge_qs_self
+  when: edge_qs_self is defined
