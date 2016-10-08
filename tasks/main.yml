@@ -1,5 +1,5 @@
 ---
-# tasks file for opdk-setup-status
+# tasks file for apigee-opdk-setup-status
 
 - name: Collect All Status
   shell: "{{ all_status }}"
