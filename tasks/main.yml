@@ -1,6 +1,5 @@
 ---
 # tasks file for apigee-opdk-setup-status
-
 - name: Collect All Status
   shell: "{{ all_status }}"
   register: results
@@ -12,7 +11,3 @@
   register: results
   ignore_errors: yes
   when: opdk_version | version_compare('4.16.01', '>=')
-
-- name: View All Status Results
-  debug:
-    var: results
