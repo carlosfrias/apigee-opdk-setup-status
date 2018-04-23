@@ -13,7 +13,7 @@ Role Variables
 
 | Variable Name | Description |
 | --- | --- |
-| apigee_all | The cannonical qualified name of the apigee-all script |
+| apigee_all | The cannonical name of the apigee-all script |
 
 Dependencies
 ------------
