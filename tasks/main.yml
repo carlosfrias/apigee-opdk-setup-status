@@ -4,10 +4,10 @@
   shell: "{{ all_status }}"
   register: results
   ignore_errors: yes
-  when: opdk_version | version_compare('4.16.01', '<')
+  when: opdk_version is version_compare('4.16.01', '<')
 
 - name: Collect All Status
   shell: "{{ apigee_all }} status"
   register: results
   ignore_errors: yes
-  when: opdk_version | version_compare('4.16.01', '>=')
+  when: opdk_version is version_compare('4.16.01', '>=')
