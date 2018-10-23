@@ -12,7 +12,7 @@
   ignore_errors: yes
   when: opdk_version is version_compare('4.16.01', '>=')
   environment:
-    http_proxy: "{{ http_proxy }}"
-    https_proxy: "{{ https_proxy }}"
-    no_proxy: "{{ no_proxy }}"
+    http_proxy: "{{ http_proxy | default('') }}"
+    https_proxy: "{{ https_proxy | default('') }}"
+    no_proxy: "{{ no_proxy | default('') }}"
 
